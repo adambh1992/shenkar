@@ -87,7 +87,9 @@ nav{
     width: fit-content;
     color: white;
 }
-
+.nav_item{
+    text-decoration: underline;
+}
 .nav_item:hover{
     color: #FDB827;
 }
