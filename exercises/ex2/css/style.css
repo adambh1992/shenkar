@@ -1,0 +1,196 @@
+*{
+    margin:0;
+    padding: 0;
+    color: white;
+}
+header,main,footer,nav,section,div
+{
+    display: block;
+}
+header{
+    width: 100%;
+    height: auto;
+    background-color: black;
+
+}
+
+a {
+    text-decoration: none;
+}
+main{
+    padding-top: 20px;
+    padding-left: 3%;}
+a.adventure{
+    color: #FDB827;
+    font-weight: bold;
+    line-height: 32px;
+    font-size: 18px;
+}
+body{
+    background-color: black;
+    width: 100%;
+}
+.lakers_logo{
+    position: relative;
+    border: 0px;;
+    width: 48px;
+    height: 48px;
+    left: 16px;
+    top: 16px;
+    margin-bottom: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.headline{
+    position: absolute;
+    width: auto;
+    height: 40px;
+    left: 80px;
+    top: 20px;
+    font-family: Carter One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #542583;
+}
+.court_cover{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+}
+.news_images{
+    position: relative;
+    width: 18%;
+    left: 0px;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.news_images:hover {
+    opacity: 0.7;
+}
+.bigger{
+    width:24%;
+}
+div.news_cover{
+    text-align: center;
+
+}
+nav{
+    padding-left: 3%;
+    padding-bottom: 5%;
+    width: fit-content;
+    color: white;
+}
+
+.nav_item:hover{
+    color: #FDB827;
+}
+h1.first_title
+{
+    position: relative;
+    top: 5%;
+    left: 3%;
+    width: fit-content;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 52px;
+    color: #FDB827;
+
+}
+span.second_title
+{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 40px;
+    color: #FDB827;
+    
+
+}
+h2{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 40px;
+    color: #FDB827;
+    padding-bottom: 5px;
+}
+
+div.adevn{
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    top: 2.5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #542583;
+}
+img.in_adevn{
+    
+    width: 100%;
+   
+}
+.icon{
+    float:right;
+    max-width:16px; 
+    max-height:16px;
+    margin-top: 8px;
+    margin-right: 2.5%;
+    
+
+}
+.social{
+    max-width:32px; 
+    max-height:32px;
+    margin-top: 4px;
+    margin-right: 2.5%;
+}
+
+ul.no_bullets {
+    list-style-type: none;
+    padding-top: 20px;
+
+}
+li{
+    padding-top:10px;
+}
+
+.rounded{
+    background-color: #542583;
+    border-radius: 30%;
+    
+}
+.news_item{
+    padding-top: 60px;
+}
+table{
+    border-collapse: collapse;
+}
+table,tr,th{
+    border: 1px solid white;
+}
+th{
+    padding-left: 10px;
+
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+footer{
+    margin-top: 50px;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    color:white;
+    background-color: #2d2d2d;
+}
