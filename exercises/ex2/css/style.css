@@ -1,3 +1,15 @@
+/*
+1. Global
+2. Header
+3. Navigation
+4. Rectangle section
+5. List
+6. News head images
+7. News item
+8. Footer
+*/
+
+/* Global */
 *{
     margin:0;
     padding: 0;
@@ -7,40 +19,29 @@ header,main,footer,nav,section,div
 {
     display: block;
 }
+a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+a:hover{
+    color: #FDB827;
+}
+main{
+    padding-top: 20px;
+    padding-left: 3%;}
+
+body{
+    background-color: black;
+    width: 100%;
+}
+/* End Global */
+/* Header */
+
 header{
     width: 100%;
     height: auto;
     background-color: black;
 
-}
-
-a {
-    text-decoration: none;
-}
-main{
-    padding-top: 20px;
-    padding-left: 3%;}
-a.adventure{
-    color: #FDB827;
-    font-weight: bold;
-    line-height: 32px;
-    font-size: 18px;
-}
-body{
-    background-color: black;
-    width: 100%;
-}
-.lakers_logo{
-    position: relative;
-    border: 0px;;
-    width: 48px;
-    height: 48px;
-    left: 16px;
-    top: 16px;
-    margin-bottom: 2%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .headline{
     position: absolute;
@@ -57,42 +58,25 @@ body{
     align-items: center;
     color: #542583;
 }
+
+.lakers_logo{
+    position: relative;
+    border: 0px;;
+    width: 48px;
+    height: 48px;
+    left: 16px;
+    top: 16px;
+    margin-bottom: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .court_cover{
     position: relative;
     width: 100%;
     height: 100%;
     left: 0px;
-}
-.news_images{
-    position: relative;
-    width: 18%;
-    left: 0px;
-    border-radius: 10px;
-    margin-left: 1%;
-    margin-right: 1%;
-    vertical-align: middle;
-}
-.news_images:hover {
-    opacity: 0.7;
-}
-.bigger{
-    width:24%;
-}
-div.news_cover{
-    text-align: center;
-
-}
-nav{
-    padding-left: 3%;
-    padding-bottom: 5%;
-    width: fit-content;
-    color: white;
-}
-.nav_item{
-    text-decoration: underline;
-}
-.nav_item:hover{
-    color: #FDB827;
 }
 h1.first_title
 {
@@ -128,37 +112,81 @@ h2{
     color: #FDB827;
     padding-bottom: 5px;
 }
+/*End Header */
 
-div.adevn{
+
+/* Navigation */
+nav{
+    padding-left: 3%;
+    padding-bottom: 5%;
+    width: fit-content;
+    color: white;
+}
+.nav_item{
+    text-decoration: underline;
+}
+.nav_item:hover{
+    color: #FDB827;
+}
+/* End Navigation */
+
+/*  Rectangle section */
+section.rectangle-section{
     display: inline-block;
-    position: relative;
     width: 25%;
-    top: 2.5%;
     margin-left: 3%;
     margin-right: 3%;
     background-color: #542583;
+    border-radius: 10px;
+    padding-bottom: 10px;
 }
-img.in_adevn{
+img.full-width{
     
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
    
 }
-.icon{
-    float:right;
-    max-width:16px; 
-    max-height:16px;
+.icon-1{
+    background: url("../images/jersey.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:16px; 
+    height:16px;
     margin-top: 8px;
-    margin-right: 2.5%;
-    
-
+    margin-left: 5%;
 }
-.social{
-    max-width:32px; 
-    max-height:32px;
-    margin-top: 4px;
-    margin-right: 2.5%;
+.icon-2{
+    background: url("../images/arena.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:16px; 
+    height:16px;
+    margin-top: 8px;
+    margin-left: 2.5%;
+}
+.icon-3{
+    background: url("../images/ea.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:16px; 
+    height:16px;
+    margin-top: 8px;
+    margin-left: 2.5%;
+}
+.icon-4{
+    background: url("../images/field.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:16px; 
+    height:16px;
+    margin-top: 8px;
+    margin-left: 2.5%;
 }
 
+/* End Rectangle section */
+
+/* List*/
 ul.no_bullets {
     list-style-type: none;
     padding-top: 20px;
@@ -169,6 +197,31 @@ li{
     line-height: 32px;
     vertical-align: middle;
     display: flex;}
+
+/* End List*/
+/* News head images */
+
+.news_images{
+    position: relative;
+    width: 18%;
+    left: 0px;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    vertical-align: middle;
+}
+.news_images:hover {
+    opacity: 0.7;
+}
+.bigger{
+    width:24%;
+}
+div.news_cover{
+    text-align: center;
+
+}
+/* End News head images */
+/* News item */
 
 .rounded{
     background-color: #542583;
@@ -193,6 +246,8 @@ th{
     padding-bottom: 5px;
     padding-top: 5px;
 }
+/* End News item */
+/* Footer */
 footer{
     margin-top: 50px;
     text-align: center;
@@ -201,3 +256,40 @@ footer{
     color:white;
     background-color: #2d2d2d;
 }
+.social-facebook{
+    background: url("../images/facebook.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:32px; 
+    height:32px;
+    margin-top: 4px;
+    margin-right: 2.5%;
+}
+.social-instgram{
+    background: url("../images/instagram.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:32px; 
+    height:32px;
+    margin-top: 4px;
+    margin-right: 2.5%;
+}
+.social-linkedin{
+    background: url("../images/linkedin.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:32px; 
+    height:32px;
+    margin-top: 4px;
+    margin-right: 2.5%;
+}
+.social-whatsapp{
+    background: url("../images/whatsapp.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width:32px; 
+    height:32px;
+    margin-top: 4px;
+    margin-right: 2.5%;
+}
+/*End Footer */
