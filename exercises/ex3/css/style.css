@@ -1,0 +1,315 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  header,
+  nav,
+  main,
+  section,
+  article,
+  footer {
+    display: block;
+}
+a {
+    text-decoration: none;   
+    color: #ffffff;
+}
+a:hover {
+   color: #95cce1; 
+   border: 1px solid #95cce1;
+}
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+li {
+    list-style-type: none;
+}
+.clearStyle {
+    clear: both;
+}
+.wrapper {
+    margin: 0px auto; 
+    max-width: 1000px;
+}
+  
+html{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+body {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(34, 53%, 82%);
+background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px
+  ),
+repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
+);
+    
+}
+header {
+   
+    height: 100px;
+    background-color: #6d695c;
+background-image:
+repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+background-size: 70px 120px;
+
+}
+.dot {
+    height: 60px;
+    width: 60px;
+    background-color: #95cce1;
+    border-radius: 50%;
+    position: relative;
+    margin: 0px auto;
+    top:18px
+}
+footer {
+    background: #555555;
+    height: 65px;
+    min-width: 100%;
+}
+ul {
+    position: relative;
+    width: fit-content;
+    top: 45%;
+    margin: 0px auto;  
+}
+li{
+      font-size: 28px;
+}
+main, nav, aside{
+    background: #b2b2b2; 
+ }
+article {
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+}
+main{
+    position: relative;
+}
+/* HomePage css */
+#homePageWrapper{
+    width: 1000px;
+}
+#homePageWrapper nav {
+    float: right;
+    width: 180px;
+    border-left: 3px solid black;
+}
+#homePageWrapper main, #homePageWrapper nav{
+  height: 835px;
+}
+#homePageWrapper main {
+    float: left;
+width: 817px;
+}
+#homePageWrapper article:nth-child(1) {
+    top: 90px;
+    left: 20px;
+    height: 300px;
+    width: 180px;
+}
+#homePageWrapper article:nth-child(2) {
+    bottom: 85px;
+    left:279px;
+    height: 300px;
+    width: 180px;
+}
+#homePageWrapper article:nth-child(3) {
+    height: 288px;
+    width: 416px;
+    top: 20px;
+    right: 50px;
+}
+#homePageWrapper li {
+padding-bottom:30px;
+}
+/* layout2 css */
+#layout2, #layout2 div main, #layout2Inner {
+    height: 100%;
+}
+
+#layout2 nav {
+     
+    height: 185px;
+    background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+}
+#layout2Inner  {
+    flex: 16.2%;
+    min-height: 650px;
+    display:flex;
+    border-right: 3px solid black;
+}
+#layout2Inner main {
+    flex: 83.8%;
+    min-width: 850px;
+}
+#layout2 main {
+    min-height: 650px;
+}
+#layout2 aside {
+    flex: 16.2%;
+    min-height: 650px;
+    border-right: 3px solid black;
+}
+#layout2 article:nth-child(1) {
+    top: 65px;
+    right: 84px;
+    height: 88px;
+    width: 124px;
+}
+#layout2 article:nth-child(2) {
+    top: 65px;
+    right: 230px;
+    height: 88px;
+    width: 124px;
+}
+#layout2 article:nth-child(3) {
+    height: 286px;
+    width: 410px;
+    top: 235px;
+    right: 84px;
+}
+#layout2 article:nth-child(4) {
+    height: 110px;
+    width: 260px;
+    top: 411px;
+    right: 514px;
+}
+.footer{
+    position:fixed;
+    bottom: 0;
+}
+#layout2 nav ul{
+    margin-left: 160px;
+}
+#layout2 li, #layout3 li{
+    display: inline;
+    padding-right: 40px;
+}
+/* layout3 css */
+#layout3 nav {
+    position: relative;
+    height: 160px;
+    background:
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+background-color: #840b2a;
+}
+#layout3 nav ul{
+    top: 20px;
+}
+
+#layout3Inner{
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+}
+#layout3Inner article{
+    position: relative;
+    margin: 0 auto;    
+}
+#layout3Inner article:nth-child(3n-1){ /*  3n-1  - 3 in row and i always change the one in the middle */
+   margin-left:90px;
+   margin-right: 90px;
+}
+#layout3{
+    height: 100%;
+ 
+}
+button {
+    position: absolute;
+    float:left;
+    font-size: 22px;
+    padding: 3px;
+    margin-left: 15px;
+    background-color: #95cce1;
+    color: whitesmoke;
+    border-color: #46bceb;
+    bottom: 0;
+}
+#clear-btn{
+    left: 100px;
+}
+.hamburger {
+    background-image: url(../images/hamburger_icon.png) ;
+    float: right;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    margin-right: 35px;
+    margin-top: 20.5px;
+    display: none;
+}
+
+@media only screen and (max-width:412px){
+    .hamburger {
+        display: block;
+    }
+    li{
+        font-size: small;
+    }
+     #layout3Inner article:nth-child(n){
+        margin: 0 auto; 
+     }
+}
+@media only screen and (min-width:413px) and (max-width:593px){
+    .hamburger {
+        display: block;
+    }
+    li{
+        font-size: small;
+    }
+     #layout3Inner article:nth-child(n){
+        margin-left: 33%;
+        margin-right: 0px;
+        display: inline-block;
+
+     }
+}
+
+@media only screen and (min-width:594px) and (max-width:850px){
+    li{
+        font-size: larger;
+    }
+    #layout3Inner article:nth-child(3n-1){
+        margin: 0 auto; 
+     }
+     #layout3Inner article:nth-child(2n-1){
+        margin-left:9%;
+        margin-right: 9%;
+     }
+}
