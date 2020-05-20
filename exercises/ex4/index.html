@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Adam's From</title>
+  <link rel="stylesheet" href="css/style.css">  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/3044771dc0.js" crossorigin="anonymous"></script>
+  
+</head>
+<body >
+
+ <header>
+  <h1 class="a">FORM</h1>
+ </header>
+  
+
+ <main>
+  <form action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET">
+    <ol>
+      <div class="row">
+        <div class="col">
+          <li class="input_txt">
+            <input id="fullName" pattern="([a-zA-Z]{2,75} ?){2,3}" name="fullName" size="40" />
+            <label class="labelStyle" for="fullName">Name</label>
+          </li>
+        </div>
+        <div class="col">
+          <li>
+            <input id="age" name="age" type="number" size="40" />
+            <label class="labelStyle" for="age">Age</label>
+          </li>
+        </div>
+
+      </div>
+      
+      <div class="row">
+        <div class="col"><li>
+          <input id="pass" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" type="password" size="40" />
+          <label class="labelStyle" for="pass">Password</label>
+          <span class="hint">Min 8 Character: UpperCase, LowerCase, Number/SpecialChar </span>
+          
+        </li>
+      </div>
+      <div class="col"><li>
+        <input id="address" name="address" size="40" />
+        <label class="labelStyle" for="address">Address</label>
+      </li>
+    </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <li>
+            <input id="mail" name="mail" type="email" size="40" />
+            <label class="labelStyle" for="mail">E-Mail</label>
+          </li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <li>
+            <input id="website" name="website"  size="40" />
+            <label class="labelStyle" for="website">Website</label>
+          </li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <li>
+            <input id="phone" name="phone" pattern="[0][5][0-9]{7,8}" type="tel" size="40" />
+            <label class="labelStyle" for="phone">Phone</label>
+          </li>
+        </div>
+        <div class="col">
+          <li>
+            <input id="coffee" name="coffee"  type="number" size="40" />
+            <label class="labelStyle" for="coffee">Coffee</label>
+          </li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <li>
+            <label class="labelStyle" for="temper">temper</label>
+            <input class="temper-range" max="100" min="50" name="temper" type="range" size="40"  value="50" >
+            <div id="h4-container"><div id="h4-subcontainer"><h4>50<span></span></h4></div></div>
+          </li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <fieldset >
+            <h3>Gender</h3> 
+             <div class="gender gender_man">
+                 <input id='male' class="check" type='radio' name="gender" value="Male"/>
+                 <label for='male'>Male</label>
+             </div>
+             <ldiv class="gender gender_woman">
+                 <input id='female' class="check" type='radio'name="gender" value="FeMale"/>
+                 <label for='female'>Fe-Male</label>
+             </div>
+         </fieldset>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col">
+
+          <fieldset>
+            <h3>Interest</h3>
+            <ul class="intersts">
+             <li class="interstsList">
+               <label class="interstsLabel">
+                 <input type="checkbox" name="interests[]" value="Football">
+                 <div class="icon-box">
+                   <i class="fas fa-futbol"   aria-hidden="true"></i>
+                 </div>
+               </label>
+             </li>
+             <li class="interstsList">
+               <label class="interstsLabel">
+                 <input type="checkbox"name="interests[]" value="Swim">
+                 <div class="icon-box">
+                   <i class="fas fa-swimmer"   aria-hidden="true"></i>
+                 </div>
+               </label>
+             </li>
+             <li class="interstsList">
+               <label class="interstsLabel">
+                 <input type="checkbox" name="interests[]" value="Coding">
+                 <div class="icon-box">
+                   <i class="fas fa-laptop-code"  aria-hidden="true"></i>
+                 </div>
+               </label>
+             </li>
+             <li class="interstsList">
+               <label class="interstsLabel">
+                 <input type="checkbox" name="interests[]" value="Ski">
+                 <div class="icon-box">
+                   <i class="fas fa-skiing"  aria-hidden="true"></i>
+                 </div>
+               </label>
+             </li>
+             <li class="interstsList">
+               <label class="interstsLabel">
+                 <input type="checkbox" name="interests[]" value="Music">
+                 <div class="icon-box">
+                   <i class="fas fa-guitar" aria-hidden="true"></i>
+                 </div>
+               </label>
+             </li>
+             <li class="interstsList">
+               <label class="interstsLabel">
+                 <input type="checkbox" name="interests[]" value="Bar's">
+                 <div class="icon-box">
+                   <i class="fas fa-cocktail" aria-hidden="true"></i>
+                 </div>
+               </label>
+             </li>
+           </ul>
+           <fieldset>
+        </div>
+      </div>     
+   </ol>
+  <div class="row">
+    <div class="col">
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+ </form> 
+  
+ </main>
+
+ <footer>
+  <h3> ©Adam Ben-Hur</h3>
+ </footer>
+  
+  <script  src="js/script.js"></script>
+
+</body>
+
+</html>

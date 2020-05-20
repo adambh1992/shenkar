@@ -1,0 +1,453 @@
+/* At first just some design */
+@import url(https://fonts.googleapis.com/css?family=Share+Tech);
+html {
+  
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+}
+body{
+  line-height: 1 !important;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  margin: 0;
+}
+html h1 {
+  color: #333;
+  font-weight: 500;
+}
+html h3 {
+  color: #aaa;
+  font-weight: 500;
+}
+html h4 {
+  color: #999;
+  font-weight: 500;
+}
+html h4:after {
+  content: "%";
+  padding-left: 1px;
+}
+input, label {
+    font-size: 1.5em;
+    font-family: Share Tech,sans;
+}
+
+form > ol {
+    list-style: none;
+    padding: 0px;
+}
+
+form > ol > li {
+  position: relative;
+  margin: 1.2em;
+}
+
+input {
+    padding: 0.1em 0em;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #555;
+    outline: none;
+    margin: 0px;
+    background: none;
+}
+
+/**** HERE THE MAGIC STARTS *****/
+/* Original label position: top left and small */
+.labelStyle {
+    position: absolute;
+    top: -1em;
+    left: 1.1em;
+    color: #aaaaaa;
+    z-index:-1;
+    font-size: 0.85em;
+    animation: float-labels 300ms none ease-out;
+  -webkit-animation: float-labels 300ms none ease-out;
+   
+    /* There is a bug sometimes pausing the animation. This avoids that.*/
+    animation-play-state:running !important;
+  -webkit-animation-play-state:running !important;
+}
+
+/* Label highlight effect also for non-JS browsers */
+input:not(.empty):focus + label {
+    color: #0099ff;
+}
+
+/* In JS Browsers the .empty class is assigned to empty inputs -> label is rendered like a placeholder in the input field */
+input.empty + label {
+    top: 0.1em;
+    font-size: 1.5em;
+    animation:none;
+  -webkit-animation:none;
+}
+
+/* The animation is a bit more complex than what is achievable with simple transitions, because I do not want the label to fly over my input. The place-holder label should fade out first and then appear again above the input text */
+@keyframes float-labels {
+  
+   0% {
+    opacity:1;
+    color:#aaa;
+    top:0.1em;
+    font-size:1.5em;
+  }
+  20% {
+    font-size:1.5em;
+    opacity:0;
+  }
+  30% {
+    top:0.1em;
+  }
+  50% {
+    opacity:0;
+    font-size:0.85em;
+  }
+  100% {
+    top:-1em; 
+    opacity:1; 
+  }
+}
+@-webkit-keyframes float-labels {
+  
+ 0% {
+    opacity:1;
+    color:#aaa;
+    top:0.1em;
+    font-size:1.5em;
+  }
+  20% {
+    font-size:1.5em;
+    opacity:0;
+  }
+  30% {
+    top:0.1em;
+  }
+  50% {
+    opacity:0;
+    font-size:0.85em;
+  }
+  100% {
+    top:-1em; 
+    opacity:1; 
+  }
+}
+
+html input[type="range"] {
+  outline: 0;
+  border: 0;
+  border-radius: 500px;
+  width: 400px;
+  max-width: 100%;
+  margin: 24px 0 16px;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  html input[type="range"] {
+    overflow: hidden;
+    height: 40px;
+    -webkit-appearance: none;
+    background-color: #ddd;
+  }
+  html input[type="range"]::-webkit-slider-runnable-track {
+    height: 40px;
+    -webkit-appearance: none;
+    color: #444;
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  html input[type="range"]::-webkit-slider-thumb {
+    width: 40px;
+    -webkit-appearance: none;
+    height: 40px;
+    cursor: ew-resize;
+    background: #fff;
+    box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
+    border-radius: 50%;
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+    position: relative;
+  }
+  html input[type="range"]:active::-webkit-slider-thumb {
+    background: #fff;
+    box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
+  }
+}
+html input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7;
+}
+html input[type="range"]::-moz-range-track {
+  background-color: #9a905d;
+}
+html input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+html input[type="range"]::-ms-fill-upper {
+  background-color: #9a905d;
+}
+
+#h4-container {
+  width: 400px;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+#h4-container #h4-subcontainer {
+  width: 100%;
+  position: relative;
+}
+#h4-container #h4-subcontainer h4 {
+  display: -webkit-box;
+  display: flex;
+  z-index: 100;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  color: #fff !important;
+  font-size: 12px;
+  -webkit-transform-origin: center -10px;
+          transform-origin: center -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: margin-top 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  transition: margin-top 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+#h4-container #h4-subcontainer h4 span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1597ff;
+  border-radius: 0 50% 50% 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: -1;
+}
+
+input:not(:active) + #h4-container h4 {
+  opacity: 0;
+  margin-top: -50px;
+  pointer-events: none;
+}
+
+.intersts {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 20px;
+  background: #ffffff00;
+  width: 350px;
+}
+.intersts .interstsList {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  margin: 15px;
+  z-index: 2;
+}
+.intersts .interstsLabel {
+  position: relative;
+  cursor: pointer;
+}
+.intersts .interstsLabel input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+.intersts .interstsLabel :checked ~ .icon-box {
+  box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.intersts .interstsLabel :checked ~ .icon-box .fas {
+  transform: scale(0.95);
+}
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: #ffffff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.intersts .interstsLabel .icon-box .fas {
+  font-size: 30px;
+  color: #6a9bd8;
+}
+#btn--yp {
+	box-sizing: content-box;
+	position: fixed;
+	z-index: 9;
+	bottom: 1em;
+	right: 1em;
+	border: solid 1em transparent;
+	width: 4.625em;
+	height: 3.25em;
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/icon-yp.svg) 50%/cover content-box;
+	font: 16px/ 1.25 trebuchet ms, sans-serif;
+	text-indent: 200vw;
+	text-shadow: none;
+	filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
+	transition: .5s;
+	white-space: nowrap;
+  }
+  #btn--yp:before {
+	box-sizing: inherit;
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	margin: 1em -.5em;
+	padding: .5em;
+	width: 100%;
+	border-radius: 5px;
+	background: #e8e0e0;
+	color: #000;
+	text-align: center;
+	text-decoration: none;
+	text-indent: 0vw;
+	white-space: normal;
+	animation: float 1s ease-in-out infinite alternate;
+	content: attr(data-txt);
+  }
+  #btn--yp:hover, #btn--yp:focus {
+	outline: none;
+	filter: grayscale(0) drop-shadow(0 0 1px crimson);
+  }
+  
+  @keyframes float {
+	to {
+	  transform: translateY(0.75em);
+	}
+  }
+  
+  .gender{
+    display: inline-block;
+    padding: 20px;
+    
+  }
+ 
+  .gender .check + label {
+	--i: var(--check, 1);
+	--j: calc(1 - var(--i));
+	position: relative;
+	width: 5.25em;
+    height: 5.25em;
+    padding: 5px;
+    box-shadow: inset 0 0 0 4px #5ca8ff;
+    font: 700 1em/ 2.25em segoe script, cursive;
+	color: #000;
+	text-align: center;
+	text-transform: capitalize;
+	--rect: inset(calc(var(--i)*.5px));
+	-webkit-clip-path: var(--rect);
+	clip-path: var(--rect);
+	mix-blend-mode: var(--check, screen);
+	cursor: pointer;
+	transition: 0.35s;
+  }
+  .gender .check + label:before, .check + label:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	opacity: var(--i);
+	background: #5ca8ff;
+	transition: inherit;
+	content: "";
+  }
+  .gender_man .check + label {
+      box-shadow: inset 0 0 0 4px #5ca8ff;
+    }
+    .gender_man .check + label:before, .check + label:after {
+    background: #5ca8ff;
+    }
+    .gender_woman .check + label {
+      box-shadow: inset 0 0 0 4px #f55cff;
+    }
+    .gender_woman .check + label:before, .check + label:after {
+    background: #f55cff;
+    }
+  
+  .gender .check + label:after {
+	left: 17.5%;
+	background: linear-gradient(90deg, #fff 50%, transparent 0) calc(var(--j)*100%)/200%;
+	--poly: polygon(0 30%, 35% 60%, 100% 0,
+									100% 25%, 35% 85%, 0 55%);
+	-webkit-clip-path: var(--poly);
+	clip-path: var(--poly);
+	transition: opacity 0.35s, background-position 0.7s 0.35s;
+  }
+  .gender  .check:not(:checked) + label {
+	--i: 0 ;
+  }
+  .check {
+    position: absolute;
+    right: 100vw;
+    }
+ main{
+  position: sticky;
+ }
+ input{
+  width: 100%;
+
+ }
+ form {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.267);
+  padding: 15px 20px 10px 20px;
+  border: solid 1px #6a9cd8;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 2em;
+}
+.col{
+  text-align: -webkit-center;
+
+}
+form button {
+  color: white;
+  background-color:#6a9cd8ce;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-family: "Bree Serif", cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  width: 100%;
+}
+.hint { display: none; }
+input:focus + label + .hint { display: flex; }
+footer{
+  text-align: center;
+}
