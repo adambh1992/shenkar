@@ -10,9 +10,24 @@ html {
           justify-content: center;
   font-family: "Work Sans", sans-serif;
   text-align: center;
+  background:
+radial-gradient(hsl(0, 0%, 100%) 4%, hsl(0, 18%, 100%) 9%, hsla(0, 20%, 100%, 0) 9%) 0 0,
+radial-gradient(hsl(0, 27%, 100%) 4%, hsl(0, 18%, 100%) 8%, hsla(0, 20%, 100%, 0) 10%) 50px 50px,
+radial-gradient(hsla(0, 30%, 100%, 0.8) 20%, hsla(0, 20%, 100%, 0)) 50px 0,
+radial-gradient(hsla(0, 30%, 100%, 0.8) 20%, hsla(0, 20%, 100%, 0)) 0 50px,
+radial-gradient(hsla(0, 20%, 100%, 1) 35%, hsla(0, 20%, 100%, 0) 60%) 50px 0,
+radial-gradient(hsla(0, 20%, 100%, 1) 35%, hsla(0, 20%, 100%, 0) 60%) 100px 50px,
+radial-gradient(hsla(0, 15%, 100%, 0.7), hsla(0, 20%, 100%, 0)) 0 0,
+radial-gradient(hsla(0, 15%, 100%, 0.7), hsla(0, 20%, 100%, 0)) 50px 50px,
+linear-gradient(45deg, hsla(0, 20%, 100%, 0) 49%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 20%, 100%, 0) 70%) 0 0,
+linear-gradient(-45deg, hsla(0, 20%, 100%, 0) 49%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 20%, 100%, 0) 70%) 0 0;
+background-color: #300;
+background-size: 100px 100px;
 }
 body{
   line-height: 1 !important;
+  background-color: #ffffff50 !important;
+
 }
 html h1,
 html h2,
